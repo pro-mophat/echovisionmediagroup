@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Echovision Media Group</title>
+    <style>
+        /* General Reset */
+        /* General Reset */
+body, h1, h2, h3, p, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background: linear-gradient(90deg, maroon, goldenrod);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+header nav ul li a:hover {
+    background-color: goldenrod;
+    transform: scale(1.1);
+}
+
+/* Payment Section */
+.payment-section {
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.payment-section h1 {
+    font-size: 2rem;
+    color: maroon;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.payment-section h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: goldenrod;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.payment-form {
+    max-width: 100%;
+    width: 90%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: auto;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    header .logo {
+        font-size: 1.8rem;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .payment-section {
+        padding: 50px 20px;
+    }
+
+    .payment-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .payment-form {
+        max-width: 600px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 20px 80px;
+    }
+
+    .payment-section h1 {
+        font-size: 3rem;
+    }
+
+    .payment-form {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .payment-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .payment-form {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+        body, h1, h2, h3, p, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, maroon, goldenrod);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            position: relative;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 8px 12px;
+            transition: background-color 0.3s, transform 0.2s;
+            border-radius: 5px;
+        }
+
+        header nav ul li a:hover {
+            background-color: goldenrod;
+            transform: scale(1.1);
+        }
+
+        .payment-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .payment-section h1 {
+            font-size: 3rem;
+            color: maroon;
+            margin-bottom: 30px;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .payment-section h1::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 4px;
+            background: goldenrod;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            border-radius: 2px;
+        }
+
+        .payment-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        .payment-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: maroon;
+            font-size: 1.2rem;
+        }
+
+        .payment-form select, .payment-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+
+        .payment-form input:focus, .payment-form select:focus {
+            outline: none;
+            border-color: maroon;
+            box-shadow: 0 0 8px rgba(128, 0, 0, 0.5);
+            transform: scale(1.02);
+        }
+
+        .payment-form button {
+            width: 100%;
+            background: linear-gradient(90deg, maroon, goldenrod);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 12px;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .payment-form button:hover {
+            background-color: goldenrod;
+            transform: scale(1.05);
+        }
+
+        footer {
+            padding: 20px;
+            background-color: maroon;
+            color: white;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        footer .social-icons {
+            margin-top: 10px;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: goldenrod;
+        }
+
+        .mpesa-prompt {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .mpesa-prompt p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .mpesa-prompt button {
+            background: maroon;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .mpesa-prompt button:hover {
+            background: goldenrod;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Echovision Media Group</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking-contact.html">Booking</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="payment.html">Payment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <h1>Secure Payment</h1>
+        <form class="payment-form">
+            <label for="method">Select Payment Method:</label>
+            <select id="method" name="method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="mpesa">M-Pesa</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            </select>
+
+            <label for="name">Name on Card:</label>
+            <input type="text" id="name" name="name" placeholder="Enter name as it appears on card" required>
+
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
+
+            <label for="expiry">Expiry Date:</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="3-digit CVV" required>
+
+            <label for="amount">Amount (USD):</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter the amount to pay" required>
+
+            <button type="button" onclick="processPayment()">Make Payment</button>
+        </form>
+    </section>
+
+    <!-- M-Pesa Prompt -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mpesa-prompt" id="mpesaPrompt">
+        <p>Please confirm your M-Pesa payment on your mobile phone.</p>
+        <button onclick="closeMpesaPrompt()">Close</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Echovision Media Group. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        function processPayment() {
+            const method = document.getElementById('method').value;
+            if (method === 'mpesa') {
+                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('mpesaPrompt').style.display = 'block';
+            } else {
+                alert('Payment method selected: ' + method + '. Proceed with payment process.');
+            }
+        }
+
+        function closeMpesaPrompt() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('mpesaPrompt').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
