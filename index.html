@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.Echovision Media Group</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: linear-gradient(90deg, maroon, goldenrod);
+            color: white;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+
+        .company-info {
+            text-align: center;
+        }
+
+        .slogan {
+            font-style: italic;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: maroon;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: goldenrod;
+        }
+
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full screen height */
+            background: linear-gradient(
+                    rgba(0, 0, 0, 0.5), 
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url('hero-bg.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: goldenrod;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: maroon;
+            transform: scale(1.05);
+        }
+
+        .about, .location, .team, .cta {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about p, .team p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .map-container {
+            margin: 20px auto;
+            max-width: 930x;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 50px 10px;
+            text-align: center;
+        }
+
+        .team-member {
+            text-align: center;
+            max-width: 230px;
+        }
+
+        .team-photo {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .team-photo:hover {
+            transform: scale(1.1);
+        }
+
+        .cta {
+            background: maroon;
+            color: white;
+            padding: 50px 20px;
+            border-radius: 10px;
+        }
+
+        .cta-button {
+            background: goldenrod;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .cta-button:hover {
+            background: white;
+            color: maroon;
+        }
+
+        footer {
+            background: maroon;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: goldenrod;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+header {
+    background-color: maroon;
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: golden;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/hero-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    font-size: 20px;
+    padding: 15px 30px;
+    background-color: maroon;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: golden;  /* Golden hover effect */
+}
+
+/* About Preview Section */
+#about-preview {
+    background-color: #f9f9f9;  /* Light background */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about-preview h2 {
+    font-size: 36px;
+    color: maroon;
+    margin-bottom: 20px;
+}
+
+#about-preview p {
+    font-size: 20px;
+    color: maroon;
+    margin-bottom: 30px;
+}
+
+#about-preview .cta-button {
+    background-color: golden;  /* Golden button */
+    font-size: 18px;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: maroon;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Company Logo" class="logo">
+        </div>
+        <div class="company-info">
+            <h1>ECHOVISION MEDIA GROUP</h1>
+            <p class="slogan">Shaping Sight, Sound, and Story</p>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking-contact.html">Booking/Contact</a></li>
+            <li><a href="feedback.html">Customer Feedback</a></li>
+            <li><a href="payment.html">Payment</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ECHOVISION MEDIA GROUP</h1>
+            <p>Bringing your artistic vision to life through music, art, photography, and videography.</p>
+            <a href="#cta" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a creative studio specializing in music production, visual arts, photography, and videography. Our team is dedicated to bringing your creative projects to life with professional expertise and passion. We capture the essence of both videography (visual) and audio production (sound), while also suggesting a dynamic and innovative approach to media creation.</p>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <h2>Our Location</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124672.74162212015!2d34.7374574!3d-0.0359835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x183f8f3eb46999e9%3A0x85a9bc8a65ea07!2sSophia%20Estate%2C%20Homabay%20Town!5e0!3m2!1sen!2ske!4v1630612962024!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="images/image morphat.jpg" alt="CEO" class="team-photo">
+            <h3>Steve Mophat Akello</h3>
+            <p>CEO (Chief Executive Officer)</p>
+            <p>As the CEO, Steve is responsible for setting the strategic vision and overseeing the company's growth and operations.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/image owen.png" alt="Assistant CEO" class="team-photo">
+            <h3>Michael Owen</h3>
+            <p>Assistant CEO/Photographer</p>
+            <p>Owen supports the CEO and handles the day-to-day operations of the studio, ensuring all projects run smoothly.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/image swizer.jpg" alt="Music Producer" class="team-photo">
+            <h3>Swizer Yvett</h3>
+            <p>Music Producer</p>
+            <p>Swizer brings creativity to life through his music production skills, managing sound design and audio production for various projects.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/image steve.jpg" alt="Photographer" class="team-photo">
+            <h3>Steve Odhiambo</h3>
+            <p>Technician</p>
+            <p>Steve maintains the equipment, ensuring all machines are in excellent working condition.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/image morphat.jpg" alt="Videographer" class="team-photo">
+            <h3>Steve Morphat Akello</h3>
+            <p>Videographer</p>
+            <p>Steve captures cinematic footage to bring projects to life through professional videography.</p>
+        </div>
+        <div class="team-member">
+            <img src="images/image nick.jpg" alt="Art Director" class="team-photo">
+            <h3>Nickson Nyawara</h3>
+            <p>Art Director</p>
+            <p>Nickson leads the creative direction of all visual content, ensuring designs align with the client’s vision.</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="cta">
+        <h2>Let's Create Something Amazing Together</h2>
+        <p>If you're ready to elevate your brand or project with exceptional music, art, photography, or videography, we’re here to help.</p>
+        <a href="booking-contact.html" class="cta-button">Contact Us</a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; Echovision Media Group 2025 | All rights reserved</p>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+    </footer>
+
+</body>
+</html>
